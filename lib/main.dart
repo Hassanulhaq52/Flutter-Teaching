@@ -39,6 +39,46 @@
 //   }
 // }
 
+// import 'package:app/Provider/increament_provider.dart';
+// import 'package:app/controllers/scroll_controller_screen.dart';
+// import 'package:app/controllers/text_editing_controller_screen.dart';
+// import 'package:app/drawer_screen.dart';
+// import 'package:app/layout.dart';
+// import 'package:app/multi_child/expanded_screen.dart';
+// import 'package:app/multi_child/stack_screen.dart';
+// import 'package:app/navigation/home_screen.dart';
+// import 'package:app/navigation/screen_one.dart';
+// import 'package:app/navigation/screen_two.dart';
+// import 'package:flutter/material.dart';
+// import 'package:provider/provider.dart';
+//
+// import 'multi_child/gridview_screen.dart';
+//
+// void main() {
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return  ChangeNotifierProvider(
+//       create: (_) => IncrementProvider(),
+//       child: MaterialApp(
+//         // initialRoute: '/',
+//         // routes: {
+//         //
+//         //   '/': (context) => HomeScreen(),
+//         //   '/screenOne': (context) => ScreenOne(),
+//         //   '/screenTwo': (context) => ScreenTwo(),
+//         //
+//         //
+//         // },
+//         home: ScrollControllerScreen()
+//       ),
+//     );
+//   }
+// }
+
 import 'package:app/Provider/increament_provider.dart';
 import 'package:app/controllers/scroll_controller_screen.dart';
 import 'package:app/controllers/text_editing_controller_screen.dart';
@@ -49,6 +89,7 @@ import 'package:app/multi_child/stack_screen.dart';
 import 'package:app/navigation/home_screen.dart';
 import 'package:app/navigation/screen_one.dart';
 import 'package:app/navigation/screen_two.dart';
+import 'package:app/styling_responsiveness/styling_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -61,20 +102,11 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  ChangeNotifierProvider(
-      create: (_) => IncrementProvider(),
-      child: MaterialApp(
-        // initialRoute: '/',
-        // routes: {
-        //
-        //   '/': (context) => HomeScreen(),
-        //   '/screenOne': (context) => ScreenOne(),
-        //   '/screenTwo': (context) => ScreenTwo(),
-        //
-        //
-        // },
-        home: ScrollControllerScreen()
-      ),
+    return  MaterialApp(
+debugShowCheckedModeBanner: false,
+        title: 'Styling Demo',
+        theme: ThemeData(primaryColor: Colors.green),
+        home: StylingScreen(),
     );
   }
 }
