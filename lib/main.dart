@@ -40,6 +40,7 @@
 // }
 
 import 'package:app/Provider/increament_provider.dart';
+import 'package:app/controllers/scroll_controller_screen.dart';
 import 'package:app/controllers/text_editing_controller_screen.dart';
 import 'package:app/drawer_screen.dart';
 import 'package:app/layout.dart';
@@ -72,7 +73,7 @@ class MyApp extends StatelessWidget {
         //
         //
         // },
-        home: TextEditingControllerScreen()
+        home: ScrollControllerScreen()
       ),
     );
   }
