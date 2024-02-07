@@ -10,7 +10,7 @@ class TextEditingControllerScreen extends StatefulWidget {
 
 class _TextEditingControllerScreenState
     extends State<TextEditingControllerScreen> {
-  String fieldValue = '';
+  TextEditingController fieldValue = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +20,14 @@ class _TextEditingControllerScreenState
           TextField(
             onChanged: (value) {
               setState(() {
-                fieldValue = value;
+                fieldValue.text = value;
               });
 
-              print(fieldValue);
+              print(fieldValue.text);
             },
+            controller: fieldValue,
           ),
-          Text(fieldValue),
+          Text(fieldValue.text),
         ],
       ),
     );

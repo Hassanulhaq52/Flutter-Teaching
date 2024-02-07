@@ -102,11 +102,11 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-debugShowCheckedModeBanner: false,
-        title: 'Styling Demo',
-        theme: ThemeData(primaryColor: Colors.green),
-        home: StylingScreen(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Styling Demo',
+      theme: ThemeData.dark(),
+      home: TextEditingControllerScreen(),
     );
   }
 }
