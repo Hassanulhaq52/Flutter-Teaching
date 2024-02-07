@@ -25,7 +25,7 @@ class _TextEditingControllerScreenState
 
               print(fieldValue.text);
             },
-            controller: fieldValue,
+            // controller: fieldValue,
           ),
           Text(fieldValue.text),
         ],
