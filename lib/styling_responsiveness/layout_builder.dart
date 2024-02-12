@@ -15,20 +15,20 @@ class _LayoutBuilderScreenState extends State<LayoutBuilderScreen> {
         builder: (context, constraints) {
           if (constraints.maxWidth > 400 && constraints.maxWidth < 500) {
             return Container(
-              width: 200,
-              height: 200,
+              width: MediaQuery.of(context).size.width * 0.25,
+              height: MediaQuery.of(context).size.height * 0.5,
+              // width: 200,
+              // height: 200,
               color: Colors.green,
             );
           } else if (constraints.maxWidth > 500) {
-            return Column(
-              children: [
-                Container(
-                  width: 200,
-                  height: 200,
-                  color: Colors.blue,
-                ),
-                Text('dfdffd'),
-              ],
+            return AspectRatio(
+              aspectRatio: 16 / 8,
+              child: Container(
+                // width: 200,
+                // height: 200,
+                color: Colors.blue,
+              ),
             );
           } else {
             return Row(
