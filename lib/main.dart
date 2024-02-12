@@ -89,6 +89,7 @@ import 'package:app/multi_child/stack_screen.dart';
 import 'package:app/navigation/home_screen.dart';
 import 'package:app/navigation/screen_one.dart';
 import 'package:app/navigation/screen_two.dart';
+import 'package:app/styling_responsiveness/layout_builder.dart';
 import 'package:app/styling_responsiveness/styling_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -105,8 +106,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Styling Demo',
-      theme: ThemeData.dark(),
-      home: TextEditingControllerScreen(),
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.system,
+      home: LayoutBuilderScreen(),
     );
   }
 }
