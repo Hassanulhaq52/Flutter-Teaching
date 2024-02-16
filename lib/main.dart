@@ -80,6 +80,7 @@
 // }
 
 import 'package:app/Provider/increament_provider.dart';
+import 'package:app/api_integration/screens/fact_screen.dart';
 import 'package:app/builders/future_builder_screen.dart';
 import 'package:app/builders/splash_screen.dart';
 import 'package:app/builders/stream_builder_screen.dart';
@@ -112,7 +113,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,
-      home: StreamBuilderScreen()
+      home: FactScreen(),
     );
   }
 }

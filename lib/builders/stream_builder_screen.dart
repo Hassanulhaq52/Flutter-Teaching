@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 Stream<int> generateNumbers() async* {
   int count = 0;
-  for (int i = 1; i<20; i++) {
+  for (int i = 1; i < 20; i++) {
     await Future.delayed(Duration(seconds: 1));
     yield count++;
   }
