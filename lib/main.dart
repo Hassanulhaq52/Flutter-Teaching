@@ -89,6 +89,7 @@ import 'package:app/controllers/scroll_controller_screen.dart';
 import 'package:app/controllers/text_editing_controller_screen.dart';
 import 'package:app/drawer_screen.dart';
 import 'package:app/firebase/add_data_screen.dart';
+import 'package:app/firebase/fetch_data.dart';
 import 'package:app/firebase_options.dart';
 import 'package:app/layout.dart';
 import 'package:app/multi_child/expanded_screen.dart';
@@ -119,7 +120,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,
-      home: AddDataScreen(),
+      home: FetchDataScreen(),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:app/firebase/fetch_data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
@@ -28,8 +29,9 @@ class AddDataScreen extends StatelessWidget {
               onPressed: () async {
                 // final ad = await addData();
                 // ad();
-
                 addData();
+
+                Navigator.push(context, MaterialPageRoute(builder: (context) => FetchDataScreen(),));
               },
               child: Text('Add'))
         ],
