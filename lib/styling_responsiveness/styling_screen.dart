@@ -59,7 +59,7 @@ class StylingScreen extends StatelessWidget {
             onPressed: () {},
             child: Text('Button'),
             style: ElevatedButton.styleFrom(
-                primary: Colors.amberAccent.shade200,
+                // primary: Colors.amberAccent.shade200,
                 shadowColor: Colors.red,
                 elevation: 20,
                 shape: RoundedRectangleBorder(

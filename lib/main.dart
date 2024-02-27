@@ -81,12 +81,15 @@
 
 import 'package:app/Provider/increament_provider.dart';
 import 'package:app/api_integration/screens/fact_screen.dart';
+import 'package:app/api_integration/screens/product_screen.dart';
 import 'package:app/builders/future_builder_screen.dart';
 import 'package:app/builders/splash_screen.dart';
 import 'package:app/builders/stream_builder_screen.dart';
 import 'package:app/controllers/scroll_controller_screen.dart';
 import 'package:app/controllers/text_editing_controller_screen.dart';
 import 'package:app/drawer_screen.dart';
+import 'package:app/firebase/add_data_screen.dart';
+import 'package:app/firebase_options.dart';
 import 'package:app/layout.dart';
 import 'package:app/multi_child/expanded_screen.dart';
 import 'package:app/multi_child/stack_screen.dart';
@@ -95,13 +98,16 @@ import 'package:app/navigation/screen_one.dart';
 import 'package:app/navigation/screen_two.dart';
 import 'package:app/styling_responsiveness/layout_builder.dart';
 import 'package:app/styling_responsiveness/styling_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'multi_child/gridview_screen.dart';
 
-void main() {
+void main() async {
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
@@ -113,7 +119,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,
-      home: FactScreen(),
+      home: AddDataScreen(),
     );
   }
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1009469149587",
+    "project_id": "fir-teaching-4f8c4",
+    "storage_bucket": "fir-teaching-4f8c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1009469149587:android:eadb86bd1aa94a5a885866",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN7of_0izHCqPY_biGZz5qgU63ccpYD0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
