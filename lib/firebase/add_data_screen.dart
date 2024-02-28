@@ -31,7 +31,11 @@ class AddDataScreen extends StatelessWidget {
                 // ad();
                 addData();
 
-                Navigator.push(context, MaterialPageRoute(builder: (context) => FetchDataScreen(),));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FetchDataScreen(),
+                    ));
               },
               child: Text('Add'))
         ],

@@ -1,3 +1,4 @@
+import 'package:app/firebase/update_data_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
@@ -28,9 +29,22 @@ class FetchDataScreen extends StatelessWidget {
                       color: Colors.red,
                     ),
                     onPressed: () {
-
-                     deleteData(snapshot.data!.docs[index].id);
-
+                      deleteData(snapshot.data!.docs[index].id);
+                    },
+                  ),
+                  leading:  IconButton(
+                    icon: Icon(
+                      Icons.edit,
+                      color: Colors.yellow,
+                    ),
+                    onPressed: () {
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //       builder: (context) => UpdateDataScreen(
+                      //           docId: snapshot.data!.docs[index].id,
+                      //           name: snapshot.data!.docs[index]['name']),
+                      //     ));
                     },
                   ),
                 );

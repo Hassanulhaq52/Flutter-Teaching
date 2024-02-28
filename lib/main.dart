@@ -89,6 +89,7 @@ import 'package:app/controllers/scroll_controller_screen.dart';
 import 'package:app/controllers/text_editing_controller_screen.dart';
 import 'package:app/drawer_screen.dart';
 import 'package:app/firebase/add_data_screen.dart';
+import 'package:app/firebase/add_image.dart';
 import 'package:app/firebase/fetch_data.dart';
 import 'package:app/firebase_options.dart';
 import 'package:app/layout.dart';
@@ -108,7 +109,6 @@ import 'multi_child/gridview_screen.dart';
 void main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(MyApp());
-
 }
 
 class MyApp extends StatelessWidget {
@@ -120,7 +120,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,
-      home: FetchDataScreen(),
+      home: AddImageScreen(),
     );
   }
 }
