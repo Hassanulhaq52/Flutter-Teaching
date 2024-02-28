@@ -32,19 +32,19 @@ class FetchDataScreen extends StatelessWidget {
                       deleteData(snapshot.data!.docs[index].id);
                     },
                   ),
-                  leading:  IconButton(
+                  leading: IconButton(
                     icon: Icon(
                       Icons.edit,
                       color: Colors.yellow,
                     ),
                     onPressed: () {
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //       builder: (context) => UpdateDataScreen(
-                      //           docId: snapshot.data!.docs[index].id,
-                      //           name: snapshot.data!.docs[index]['name']),
-                      //     ));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => UpdateDataScreen(
+                                docId: snapshot.data!.docs[index].id,
+                                name: snapshot.data!.docs[index]['name']),
+                          ));
                     },
                   ),
                 );
